@@ -12,7 +12,7 @@ on:
 
 
 jobs:
-  demo-job:
+  demo-job-called:
     runs-on: ubuntu-latest
     steps:
     - name: 'Print the input'
