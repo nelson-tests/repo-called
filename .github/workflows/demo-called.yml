@@ -1,0 +1,21 @@
+name: 'Action Called'
+
+on:
+  workflow_call:
+  inputs:
+  my-in:
+    required: true
+      type: string
+  secrets:
+    my-sec:
+      required: true
+
+
+jobs:
+  demo-job:
+  runs-on: ubuntu-latest
+  steps:
+  - name: 'Print the input'
+    run: |
+      echo "Input ${{ inputs.config-path }}"
+      echo "Secret ${{ secrets.envPAT }}"
