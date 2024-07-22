@@ -2,20 +2,20 @@ name: 'Action Called'
 
 on:
   workflow_call:
-  inputs:
-  my-in:
-    required: true
-    type: string
-  secrets:
-    my-sec:
-      required: true
+    inputs:
+      my-in:
+        required: true
+        type: string
+    secrets:
+      my-sec:
+        required: true
 
 
 jobs:
   demo-job:
-  runs-on: ubuntu-latest
-  steps:
-  - name: 'Print the input'
-    run: |
-      echo "Input ${{ inputs.my-in }}"
-      echo "Secret ${{ secrets.my-sec }}"
+    runs-on: ubuntu-latest
+    steps:
+    - name: 'Print the input'
+      run: |
+        echo "Input ${{ inputs.my-in }}"
+        echo "Secret ${{ secrets.my-sec }}"
