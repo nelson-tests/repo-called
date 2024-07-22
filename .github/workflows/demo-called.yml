@@ -15,7 +15,7 @@ jobs:
   demo-job-called:
     runs-on: ubuntu-latest
     steps:
-    - name: 'Print the input'
+    - name: 'Print'
       run: |
         echo "Input ${{ inputs.my-in }}"
         echo "Secret ${{ secrets.my-sec }}"
